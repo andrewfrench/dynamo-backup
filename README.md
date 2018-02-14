@@ -15,7 +15,14 @@ GOOS=linux go build handler.go
 Create a Lambda function to back up your Dynamo tables:
 
 ```sh
-aws lambda create-function --region $YOUR_REGION --function-name $YOUR_FUNCTION_NAME --memory 128 --role $YOUR_ROLE_ARN --runtime go1.x --zip-file fileb://handler.zip --handler handler
+aws lambda create-function \
+    --region $YOUR_REGION \
+    --function-name $YOUR_FUNCTION_NAME \
+    --memory 128 \
+    --role $YOUR_ROLE_ARN \
+    --runtime go1.x \
+    --zip-file fileb://handler.zip \
+    --handler handler
 ```
 
 Invoke the new Lambda manually or create a CloudWatch event to invoke the Lambda automatically.
