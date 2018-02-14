@@ -3,11 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
+	"time"
+
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"log"
-	"time"
 )
 
 type Request struct{}
